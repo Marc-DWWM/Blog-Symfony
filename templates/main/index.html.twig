@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello MainController!
+{% block title %}Hello
 {% endblock %}
 
 {% block body %}
@@ -22,7 +22,28 @@
 
 		<ul>
 			<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut ante nec augue hendrerit aliquam non eget nisl. Aliquam erat volutpat. Donec felis dui, condimentum ac purus vel, fermentum euismod nulla. Nullam vitae suscipit nibh. Duis risus turpis, iaculis non pulvinar et, luctus ut lorem. Pellentesque laoreet malesuada tellus nec sodales. Fusce venenatis placerat sagittis. Maecenas congue quam ultrices mattis varius.</li>
-			<li>Pellentesque rutrum viverra elit sed sagittis. Aliquam eget vulputate tortor. Vivamus erat risus, pellentesque eget lorem at, faucibus commodo augue. Pellentesque non suscipit quam. In hac habitasse platea dictumst. Ut eget tortor velit. Maecenas consequat velit nec diam egestas, eu placerat nisi suscipit. Vivamus nec tellus orci. Sed porttitor ornare mauris commodo consequat. Quisque sed lacus suscipit nisi faucibus egestas. Nullam nulla orci, suscipit non purus sit amet, ultrices sodales nulla. Proin convallis rhoncus dui. In varius arcu in dolor gravida dignissim. Nam eget maximus lectus, at rutrum lacus. Proin justo ipsum, lacinia ut gravida in, dapibus non nibh. Aenean erat sem, placerat ac iaculis a, sollicitudin ullamcorper est.</li>
 		</ul>
 	</div>
+	<div id="carouselTest" class="carousel slide p-3" data-bs-ride="carousel">
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img src="{{ asset('images/renard.jpg') }}" class="rounded mx-auto d-block w-50" alt="Renard dans la neige">
+        </div>
+        <div class="carousel-item">
+            <img src="{{ asset('images/renard_arctique.jpg') }}" class="rounded mx-auto d-block w-50" alt="Renard Arctique en Islande">
+        </div>
+        <div class="carousel-item">
+            <img src="{{ asset('images/renard_gris.jpg') }}" class="rounded mx-auto d-block w-50" alt="Renard gris dans la neige">
+        </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselTest" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselTest" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+</div>
+
 {% endblock %}

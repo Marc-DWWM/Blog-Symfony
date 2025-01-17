@@ -25,6 +25,7 @@ final class CategoriesController extends AbstractController
     #[Route('/new', name: 'app_categories_new', methods: ['GET', 'POST'])]
     public function new(Request $request, EntityManagerInterface $entityManager): Response
     {
+        $this->denyAccessUnlessGranted('ROLE_ADMIN'); 
         $category = new Categories();
         $form = $this->createForm(CategoriesType::class, $category);
         $form->handleRequest($request);
@@ -53,6 +54,7 @@ final class CategoriesController extends AbstractController
     #[Route('/{id}/edit', name: 'app_categories_edit', methods: ['GET', 'POST'])]
     public function edit(Request $request, Categories $category, EntityManagerInterface $entityManager): Response
     {
+       $this->denyAccessUnlessGranted('ROLE_ADMIN'); 
         $form = $this->createForm(CategoriesType::class, $category);
         $form->handleRequest($request);
 
